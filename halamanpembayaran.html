@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Aplikasi Pelayanan Laboratorium PSDMBP</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href=" dashboarduser.css">
+  <link rel="stylesheet" type="text/css" href=" dashboarduser.js">
+ 
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+<!--  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> -->
+  
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/498f4c8f75.js" crossorigin="anonymous"></script>
+
+</head>
+
+<!-- File: header.html
+     create by: virs
+	 Date create : 20/07/2021
+	 last update : 21/07/2021 01:47
+	 note : hanya berisi header dan sedikit sample untuk navigasinya
+-->
+
+<body>
+ <!-- Header Logo KESDM -->
+<header> 
+	<div class="container-fluid float row" style="background-color: #fff;">
+		<div class="span2 pt-4 pl-4 "  >
+			<img src="img/logo.jpg"  width="60" height="60" >
+		</div> 
+		<div class="span10 ml-4 py-4" style="color:#282a3c;" >
+			<h6><b>Pusat Sumber Daya Mineral, Batubara dan Panas Bumi</b> <br>Badan Geologi <br> Kementerian Energi dan Sumber Daya Mineral</h6>
+		</div>
+	</div>
+</header>
+<!-- header end -->
+
+
+<!-- Navigation -->
+<!-- navbar dibuat dengan 2 menu profil dan kontak tetapi navbar tidak fixed top karena tidak selalu diperhatikan user(dapat diabaikan) -->
+
+<nav class="navbar navbar-expand-md shadow-sm navbar-light" style="background-color: #293D50;">
+    <div class="order-0">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse2">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+    </div>
+    <div class="navbar-collapse collapse w-100 order-3 dual-collapse2">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item";>
+                <a class="nav-link" href="halamanprofil.html" style="color: #fff">Profil</a>
+            </li>
+            <li class="nav-item text-white">
+                <a class="nav-link" href="#" style="color: #fff">Kontak</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<!-- menu diampilkan dalam bentuk sidebar yang terdiri dari dashboard, permohonan, dan pengaduan. Menu dapat bernavigasi dari satu ke yang lainnya sesuai apa yang diinginkan user.  -->
+<div class="row no gutter mt-5 my-5"  style="background-color: #ffff00;">
+  <div class="col-md-2 mt-2 pr-3 pt-4 mt-2" style="background-color: #293D50;">
+
+    <ul class="nav flex-column ml-3 mt-7">
+
+      <li class="nav-item">
+        <a class="nav-link active text-white" href="dashboarduser.html"><i class="fas fa-tachometer-alt mr-2" style="color: #ffff00;"></i>Dashboard</a><hr style="background-color: #fff;">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="permohonananalisauser.html"><i class="fas fa-clipboard-list mr-2" style="color: #ffff00;"></i>Permohonan Analisa</a><hr style="background-color: #fff;">
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white" href="pengaduan.html"><i class="fas fa-comment-dots mr-2" style="color: #ffff00;"></i>Pengaduan</a><hr style="background-color: #fff;">
+      </li>
+    </ul>
+  </div>
+
+<!-- Navigation end -->
+
+<!--Container-->
+<!-- berbentuk form kemudian terdapat menu yang sama pada landing page -->
+    
+    <div class="card col-md-10 mt-2" style= "background-image: url(img/bg7.jpg)">
+
+      <ol class="breadcrumb mt-2 mr-2"style="color: #fff; background-color:#293D50;">
+        <li class="breadcrumb-item text-white" style="color: #fff";> <a href="permohonananalisauser.html">Permohonan Analisa</a></li>
+        <li class="breadcrumb-item">Pembayaran</li>
+      </ol>
+      
+    	<div class="container">
+	    	<div class="card mt-3 mb-5 ml-3 mr-3" style="background-color: #f1f1f1; border-color: #fff; opacity: 0.8">
+				  <div class="card-header" style="border-color: #fff"> <h5>
+				    Pembayaran</h5>
+				  </div>
+				  <div class="card-body">
+				    
+				  	<form>
+					  <div class="row mb-3">
+					    <label class="col-sm-2 col-form-label">ID Permohonan Analisa</label>
+					    <div class="col-sm-10">
+					      <div class="mt-2">: aaaaaaaaa</div>
+					    </div>
+					  </div>
+
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Status Pembayaran</label>
+              <div class="col-sm-10">
+                <div class="mt-2">: Belum Dibayar</div>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label class="col-sm-2 col-form-label">Total Yang Harus Dibayar</label>
+              <div class="col-sm-2">
+                <div class="mt-2">: Rp 2.000.000</div>
+              </div>
+              <label class="col-sm-2 col-form-label"></label>
+              <div class="col-sm-6">
+                <a href="#"class="btn btn-primary"><i class="fas fa-info-circle mr-2"></i> Detail</a>
+              </div>
+            </div>
+
+            <div class="row mb-3">
+              <label class=" col-sm-2 visually-hidden" for="filebukti">Bukti Bayar</label>
+              <div class="col-sm-10">
+              <div class="input-group mb-3">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text ml-3" for="inputGroupFile02">Kirim</label>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+
+<!--Container end-->
+
+
+<!--Footer-->
+<!-- dibua fixed bottom -->
+<nav class="navbar fixed-bottom navbar-expand-lg navbar-light text-light shadow-sm" style="background-color:#f1f1f1;">
+  <footer id="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col" style="font-size: 12px; color: #282a3c; ">
+            Hak Cipta ©️ 2021 PSDMBP (Pusat Sumber Daya Mineral Batubara dan Panas Bumi) </div>
+            
+        </div>
+    </div>
+  </footer>
+</nav>
+<!--Footer end-->
+</body>
+</html>

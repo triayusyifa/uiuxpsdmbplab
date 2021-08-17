@@ -1,0 +1,54 @@
+.nav-link:hover {
+	background-color: #282a3c;
+}
+
+nav{
+	display: flex;
+	justify-content: space-around;
+	padding: 20px 0;
+	/*font-size: 12px;*/
+
+}
+.btn-link:hover{
+	background-color: #293D50;
+	color: #ffff00;
+	border-color: #293D50;
+	text-decoration: none;
+}
+
+/*nav ul{
+	display: flex;
+	list-style: none;
+	width: 40%;
+	justify-content: space-between;
+}*/
+.fa-volume-up{
+	color: #293d50;
+}
+.fa-map-signs{
+	color:  #293d50;
+}
+.fa-vials{
+	color:  #293d50;
+}
+
+
+.btn-link{
+	padding: 6px 15px;
+	border-radius: 15px;
+	display: inline-block;
+	background-color: #ffff00;
+	border: solid 4px #ffff00;
+	font-weight: bold;
+	/*margin: 25px 0 0;*/
+	color: #293D50;
+}
+.background-image{
+	opacity: 0.8;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+input[type="text"]:focus {
+outline: none;}
+
+
