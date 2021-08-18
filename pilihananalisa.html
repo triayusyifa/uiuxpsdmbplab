@@ -238,7 +238,42 @@
       <div class="container">
                 <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
                     <div class="card-body">
-                        <table class="table table-bordered" style="border-color: #000">
+                        <div style="overflow-x:auto;">
+                            <table>
+                              <tr>
+                                <th scope="row"><p>Pengirim</p><p style="font-weight: normal;"><i>(Sender)</i></p></th>
+                                <th scope="col"><input type="text" class="form-control" id="pengirim"></th>
+                                <th scope="col"><p  style="font-weight: bold;">Kode Conto</p><p style="font-weight: normal;"><i> (Sample Code(s)) </i></p></th>
+                                <th scope="col"><input type="text" class="form-control" id="kodeconto"></th>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p style="font-weight: bold;">Sertifikat atas nama</p><p  style="font-weight: normal;"><i>(Name on Certificate(s))</i></p></td>
+                                <td><input type="text" class="form-control" id="sertifikat"></td>
+                                <td><p style="font-weight: bold;">Lokasi Pengambilan Conto </p><p><i> (Sampling Location) </i></p></td>
+                                <td><input type="text" class="form-control" id="lokasi"></td>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p style="font-weight: bold;">Alamat/Tlp </p><p  style="font-weight: normal;"><i> (Address/Phone Number)</i></p></td>
+                                <td><input type="text" class="form-control" id="alamat"></td>
+                                <td><p style="font-weight: bold;">Jumlah Sertifikat </p><p><i> (Number of Certificate(s)) </i></p></td>
+                                <td><input type="text" class="form-control" id="jumlahsertifikat"></td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p style="font-weight: bold;">Conto yang dianalisis </p><p  style="font-weight: normal;"><i> (Analysed Sample(s)) </i></p></td>
+                                <td><input type="text" class="form-control" id="contoyangdianalisis"></td>
+                                <td><p style="font-weight: bold;">Biaya Analisis</p> <p><i> (Analysis Fee) </i></p></td>
+                                <td><input type="text" class="form-control" id="biaya"></td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p>Jumlah Conto </p><p  style="font-weight: normal;"><i> (Number of Sample(s)) </i></p></td>
+                                <td><input type="numeric" class="form-control" id="jumlahconto"></td>
+                                <td><p style="font-weight: bold;">Tanggal Selesai </p><p><i> (Finised Date) </i></p></td>
+                                <td><input type="date" class="form-control" id="tanggalselesai" placeholder="bulan/hari/tahun"></td>
+                              </tr>
+                            </table>
+                        </div>
+                        <!-- <table class="table table-bordered" style="border-color: #000">
                             <tbody>       
                                 <tr >
                                     <th scope="row"><p>Pengirim</p><p style="font-weight: normal;"><i>(Sender)</i></p></th>
@@ -291,12 +326,12 @@
                                     </td>
                                 </tr>
                             </tbody>
-                        </table>
+                        </table> -->
                     </div>
                 </div>
 
 
-<<!-- div class="card col-md-12 mt-2" style="background: transparent; border-color: #293D50;background-image: url(img/bg7.jpg);  background-repeat: no-repeat;background-size: cover; border-radius: 0px">  -->
+<!-- div class="card col-md-12 mt-2" style="background: transparent; border-color: #293D50;background-image: url(img/bg7.jpg);  background-repeat: no-repeat;background-size: cover; border-radius: 0px">  -->
       
       <!-- <div class="container"> -->
 
@@ -580,7 +615,58 @@
         </div>
   </div>
 
-  <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
+        <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
+            <div class="card-header"> <h5>
+                IV  GAS KONTENT</h5>
+              </div>
+              <div class="card-body">
+                  <div style="overflow-x:auto;">
+                            <table class="table-bordered">
+                              <tr class="thead text-white" style="background-color: #293d50">
+                                <th scope="col">No.Analisis</th>
+                                <th scope="col">Parameter</th>
+                              </tr>
+                              <tr>
+                                <td><input type="text" class="form-control" id="pengirim"></td>
+                                <td>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                          <td>
+                                            -CO<sub>2</sub>CO, H<sub>2</sub>S, H<sub>2</sub>, N<sub>2</sub>O<sub>2</sub>Ar, CH<sub>4</sub>
+                                          </td>
+                                          <td>
+                                            <input type="checkbox" aria-label="Checkbox for following text input">
+                                          </td>
+                                        </tr>
+                                    </table>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                              <td>
+                                                -Cl<sup>-</sup>
+                                              </td>
+                                              <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                              </td>
+                                              <td>
+                                                -NH<sub>4</sub>
+                                              </td>
+                                              <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                              </td>
+                                              <td>
+                                                -H<sub>2</sub>O
+                                              </td>
+                                              <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input">
+                                              </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                              </tr>
+                            </table>
+                    </div>
+                </div>
+  <!-- <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
           <div class="card-header"> <h5>
             IV  GAS KONTENT</h5>
           </div>
@@ -650,7 +736,7 @@
                             </tr>
                           </table>
                         </div>
-                    </div>
+                    </div> -->
             </td>
           </tr>
         </tbody>
