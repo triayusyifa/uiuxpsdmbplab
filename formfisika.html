@@ -85,7 +85,7 @@
         <!-- berisi tabel -->
         
         <div class="card col-md-10 mt-2" style="background: transparent; border-color: #293D50;background-image: url(img/bg7.jpg);  background-repeat: no-repeat;background-size: cover; border-radius: 0px"> <!-- style="width: 18rem; -->
-            <div class="card-title mt-5 text-white" style="text-align: center;"><b style="font-size: 25px"> LABORATORIUM PUSAT SUMBER DAYA MINERAL, BATUBARA DAN PANAS BUMI</b><p><b style="text-decoration-line: underline; font-size: 30px">PERMOHONAN ANALISIS FISIKA MINERAL, DAN BATUBARA</b><p style="font-size: 25px">No:
+            <div class="card-title mt-5 text-white" style="text-align: center;"><b style="font-size: 25px"> LABORATORIUM PUSAT SUMBER DAYA MINERAL, BATUBARA DAN PANAS BUMI</b><p><b style="text-decoration-line: underline; font-size: 30px">PERMOHONAN ANALISIS FISIKA MINERAL, DAN BATUBARA</b></p><p style="font-size: 25px">No:
                 <select id="year" style="background-color: transparent; border-color: transparent; color: #293d50; font-size: 25px">
                     <option>01</option>
                     <option value="02">02</option>
@@ -238,67 +238,326 @@
             <div class="container">
                 <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
                     <div class="card-body">
-                        <table class="table table-bordered" style="border-color: #000">
-                            <tbody>       
-                                <tr >
-                                    <th scope="row"><p>Pengirim</p><p style="font-weight: normal;"><i>(Sender)</i></p></th>
-                                    <td>
-                                        <input type="text" class="form-control" id="pengirim">
-                                    </td>
-                                    <td><p  style="font-weight: bold;">Kode Conto</p><p><i> (Sample Code(s)) </i></p></td>
-                                    <td>
-                                        <input type="text" class="form-control" id="kodeconto">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><p>Sertifikat atas nama</p><p  style="font-weight: normal;"><i>(Name on Certificate(s))</i></p></th>
-                                    <td>
-                                        <input type="text" class="form-control" id="sertifikat">
-                                    </td>
-                                    <td><p style="font-weight: bold;">Lokasi Pengambilan Conto </p><p><i> (Sampling Location) </i></p></td>
-                                    <td>
-                                        <input type="text" class="form-control" id="lokasi">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><p>Alamat/Tlp </p><p  style="font-weight: normal;"><i> (Address/Phone Number)</i></p></th>
-                                    <td>
-                                        <input type="text" class="form-control" id="alamat">
-                                    </td>
-                                    <td><p style="font-weight: bold;">Jumlah Sertifikat </p><p><i> (Number of Certificate(s)) </i></p></td>
-                                    <td>
-                                        <input type="text" class="form-control" id="jumlahsertifikat">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><p>Conto yang dianalisis </p><p  style="font-weight: normal;"><i> (Analysed Sample(s)) </i></p></th>
-                                    <td>
-                                        <input type="text" class="form-control" id="contoyangdianalisis">
-                                    </td>
-                                    <td><p style="font-weight: bold;">Biaya Analisis</p> <p><i> (Analysis Fee) </i></p></td>
-                                    <td>
-                                        <input type="text" class="form-control" id="biaya">
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <th scope="row"><p>Jumlah Conto </p><p  style="font-weight: normal;"><i> (Number of Sample(s)) </i></p></th>
-                                    <td>
-                                        <input type="numeric" class="form-control" id="jumlahconto">
-                                    </td>
-                                    <td><p style="font-weight: bold;">Tanggal Selesai </p><p><i> (Finised Date) </i></p></td>
-                                    <td>
-                                        <input type="text" class="form-control" id="tanggalselesai" placeholder="hari/bulan/tahun">
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
+                        <div style="overflow-x:auto;">
+                            <table>
+                              <tr>
+                                <th scope="row"><p>Pengirim</p><p style="font-weight: normal;"><i>(Sender)</i></p></th>
+                                <th scope="col"><input type="text" class="form-control" id="pengirim"></th>
+                                <th scope="col"><p  style="font-weight: bold;">Kode Conto</p><p style="font-weight: normal;"><i> (Sample Code(s)) </i></p></th>
+                                <th scope="col"><input type="text" class="form-control" id="kodeconto"></th>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p style="font-weight: bold;">Sertifikat atas nama</p><p  style="font-weight: normal;"><i>(Name on Certificate(s))</i></p></td>
+                                <td><input type="text" class="form-control" id="sertifikat"></td>
+                                <td><p style="font-weight: bold;">Lokasi Pengambilan Conto </p><p><i> (Sampling Location) </i></p></td>
+                                <td><input type="text" class="form-control" id="lokasi"></td>
+                                </td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p style="font-weight: bold;">Alamat/Tlp </p><p  style="font-weight: normal;"><i> (Address/Phone Number)</i></p></td>
+                                <td><input type="text" class="form-control" id="alamat"></td>
+                                <td><p style="font-weight: bold;">Jumlah Sertifikat </p><p><i> (Number of Certificate(s)) </i></p></td>
+                                <td><input type="text" class="form-control" id="jumlahsertifikat"></td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p style="font-weight: bold;">Conto yang dianalisis </p><p  style="font-weight: normal;"><i> (Analysed Sample(s)) </i></p></td>
+                                <td><input type="text" class="form-control" id="contoyangdianalisis"></td>
+                                <td><p style="font-weight: bold;">Biaya Analisis</p> <p><i> (Analysis Fee) </i></p></td>
+                                <td><input type="text" class="form-control" id="biaya"></td>
+                              </tr>
+                              <tr>
+                                <td scope="row"><p>Jumlah Conto </p><p  style="font-weight: normal;"><i> (Number of Sample(s)) </i></p></td>
+                                <td><input type="numeric" class="form-control" id="jumlahconto"></td>
+                                <td><p style="font-weight: bold;">Tanggal Selesai </p><p><i> (Finised Date) </i></p></td>
+                                <td><input type="date" class="form-control" id="tanggalselesai" placeholder="bulan/hari/tahun"></td>
+                              </tr>
+                            </table>
+                        </div>
                     </div>
                 </div>
 
                 
-              
-                <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
-                    <!--  -->
+            <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
+              <div class="card-body">
+                <div style="overflow-x:auto;">
+                    <table class="table-bordered">
+                        <tr class="thead text-white" style="background-color: #293d50">
+                            <th scope="col">JENIS ANALISIS</th>
+                            <th scope="col">JENIS ANALISIS</th>
+                        </tr>
+                        <tr>
+                                <td valign="top">
+                                    <b>Petrografi Batuan </b><i>(Rock Petography)</i><sup>*</sup>
+                                    <p>(IK-FM-7.4.01)</p>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                            </td>
+
+                                            <td>
+                                                Identifikasi mineral-mineral penyusun batuan dan presentasenya untuk menentukan penamaan batuan
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <td valign="top">
+                                        <b>Mineragrafi</b> <i>(Mineragraphy)</i><sup>*</sup>
+                                        <p>(IK-FM-7.4.02)</p>
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Identifikasi jenis, presentase dan paragenesa mineral-mineral logam dari suatu bijih
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                    </td>
+                                </td>
+                        </tr>
+
+                        <tr>
+                                <td valign="top">
+                                        <b>Mineral Butir </b><i>(Grain Mineral)</i><sup>*</sup>
+                                        <p>(IK-FM-7.4.03)</p>
+                                        <table class="table-borderless" style="border-color: transparent;">
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                                </td>
+
+                                                <td>
+                                                    Identifikasi jenis dan presentase mineral pada suatu kosentrat/conto berupa butiran
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                        <b>Ayak  </b><i>(Seiving Analysis and Mineral Identification)</i>
+                                        <p>(IK-FM-7.4.03)</p>
+                                        <table class="table-borderless" style="border-color: transparent;">
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                                </td>
+
+                                                <td>
+                                                    Identifikasi jenis dan presentase mineral dari 6 fraksi ukuran ayakan
+                                                </td>
+                                            </tr>
+                                        </table>
+
+                                <td valign="top">
+                                        <b>Petografi Batubara</b> <i>(Coal Petrography)</i><sup>*</sup>
+                                        <p>(IK-FM-7.4.05) (IK-FM-7.4.06)</p>
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Identifikasi jenis dan presentase masereal, dan nilai reflektansi maseral vitrinit
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                    </td>
+                                </td>
+                        </tr> 
+                        <tr>
+                                <td valign="top">
+                                    <b>SEM </b><i>(Scanning Electron Microscope)</i>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                            </td>
+
+                                            <td>
+                                                Identifikasi bentuk, ukuran, dan presetasae unsur dari suatu mineral / material
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <td valign="top">
+                                        <b>XRD</b> <i>(X - Ray Diffraction)</i>
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Identifikasi mineral dengan menggunakan X-Ray Diffaction
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                    </td>
+                                </td>
+                        </tr>       
+
+                        <tr>
+                                <td valign="top">
+                                    <b>SRA </b><i>(Source Rock Analyzer)</i>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                            </td>
+
+                                            <td>
+                                                Identifikasi tipe dan kematangan material organik
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <td valign="top">
+                                        <b>Inklusi Fluida</b> <i>(Fluid Inclusion)</i>
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Analisa untuk mengetahui temperatur homogenisasi (Th) dan temperatur leleh (Tm) dari inklusi fluida
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                    </td>
+                                </td>
+                        </tr>       
+
+                        <tr>
+                                <td valign="top">
+                                    <b>Spektroskopi Raman </b><i>(Raman Spectroscopy)</i>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                            </td>
+
+                                            <td>
+                                                Identifikasi jenis mineral / material dan komposisi kimia dan inklusi fluida
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <td valign="top">
+                                        <b>Dosimetri Termoluminisensi</b> <i>(Thermoluminescense Dosimetry)</i>
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Analisa untuk mengetahui unsur batuan
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                    </td>
+                                </td>
+                        </tr>       
+
+                        <tr>
+                                <td valign="top">
+                                    <b>Analisis Retort </b><i>(Retort Aalysis)</i>
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                            </td>
+
+                                            <td>
+                                                Analisis untuk mengetahui kandungan minyak dalam batubara atau bitumen padat
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <td valign="top">
+                                        <b>Preparasi</b> <i>Preparation</i>
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td class="mr-5">
+                                                        Sayatan Tipis<i> (Thin Section)</i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Sayatan Poles<i> (Polished Section)</i>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>
+                                                        <input type="checkbox" aria-label="Checkbox for following text-input">
+                                                    </td>
+                                                    <td>
+                                                        Pemolesan Batuan<i> (Rock Polishing)</i>
+                                                    </td>
+                                                </tr>
+                                            </table>
+                                            
+                                        </div>
+                                    </td>
+                                </td>
+                        </tr>
+                        <tr>
+                                <td valign="top">
+                                    <table class="table-borderless" style="border-color: transparent;">
+                                        <tr>
+                                            <td>
+                                                <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                            </td>
+
+                                            <td style="font-weight: bold;">
+                                                Derajat Kemagnetan <i style="font-weight: normal;">(Magnetic Degree)</i>
+                                            </td>
+                                        </tr>
+                                    </table>
+
+                                    <td valign="top">
+                                            <table class="table-borderless" style="border-color: transparent;">
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                                </td>
+
+                                                <td style="font-weight: bold;">Berat Jenis<i style="font-weight: normal;"> (Specific Gravity)</i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <input type="checkbox" aria-label="Checkbox for following text input"> </label>
+                                                </td>
+                                                <td style="font-weight: bold;">Kuat Tekan<i style="font-weight: normal;"> (Compression Strength)</i>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </td>
+                        </tr>        
+
+
+                        </table>
+                      </div>
+                    </div>
+                </div>
+                <!-- <div class="card mt-5 mr-7 mb-5" style="background-color: #f1f1f1; opacity: 0.8">
+                   
                     <div class="card-body">
                         <table class="table table-bordered boder-dark" style="border-color: #293D50">
                             <thead class="thead text-white" style="background-color: #293d50">
@@ -315,7 +574,6 @@
                                         <div class="p-2 bd-highlight">
                                             <table class="table-borderless">
                                                 <tr>
-                                          <!--   <p> -->
                                                     <td>
                                                         <input type="checkbox" aria-label="Checkbox for following text input"> </label>
                                                     </td>
@@ -325,9 +583,8 @@
                                                     </td>
                                                 </tr>
                                             </table>
-                                            <!-- </p> -->
-                                        </div>
-
+                                        </div> -->
+<!-- 
 
                                     </td>
                                     <td>
@@ -611,12 +868,12 @@
                             </tbody>
                         </table>
                     </div>
-                </div>
+                </div> -->
                 <div class="card text-white mt-5 mr-7 mb-5 "style="background-color: transparent; border-color: #fff">
                     <div class="card-body">
                     <b><sup>*</sup>Terakreditasi</b>
                         
-                        <table>
+                        <table style="border-color: transparent;">
                             <tr>
                                 <td>
                                     Kapasitas:
@@ -625,7 +882,7 @@
                                     -3 conto / 5 hari (Petrografi)
                                 </td>
                             </tr>
-                            <tr>
+                            <tr style="background-color: transparent;">
                                 <td>
                                     
                                 </td>
@@ -644,9 +901,11 @@
                         </table>
                     </div>
                 </div>
-            
-        
             </div>
+    </div>
+</div>
+</div>
+
 
             
                  
